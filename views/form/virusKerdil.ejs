@@ -1,0 +1,59 @@
+<%- include('../partials/form/header') %>
+
+<div class="container-fluid">
+  <div class="container p-5">
+    <h3 class="text-center">Apakah memiliki gejala sebagai berikut?</h3>
+    <main>
+      <form
+        action="/virusKerdil"
+        method="post"
+        class="d-flex flex-column justify-content-center align-items-center"
+      >
+        <section class="m-3">
+          <ul>
+            <li>Daun menguning</li>
+            <li>Tanaman mengerdil</li>
+            <li>Tidak membentuk tunas samping</li>
+            <li>Daun kerdil atau berkerut</li>
+          </ul>
+        </section>
+
+        <div class="d-flex justify-content-center">
+          <section class="mb-4">
+            <div class="form-check form-check-inline mx-3">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="indicator"
+                id="flexRadioDefault1"
+                value="y"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Ya
+              </label>
+            </div>
+
+            <div class="form-check form-check-inline mx-3">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="indicator"
+                id="flexRadioDefault2"
+                value="n"
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Tidak
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <button class="btn btn-primary">Diagnosa</button>
+      </form>
+    </main>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>
+
