@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
@@ -11,7 +12,12 @@ app.use(express.urlencoded({
     extended: true
 }));
 
+
 app.get('/', (req, res) => {
+    res.render('index');
+})
+
+app.get('/pengorokDaun', (req, res) => {
     res.render('form/pengorokDaun');
 });
 
@@ -151,12 +157,12 @@ app.post('/busukPangkal', (req, res) => {
     if (indicator === 'y') {
         res.render('diagnosa/busukPangkal');
     } else {
-        res.send('Selesai');
+        res.render('diagnosa/notFound');
     }
 });
 
 
 
-app.listen(8080, () => {
-    console.log('listening on port http://localhost:8080');
+app.listen(port, () => {
+    console.log(`listening on port ${port}`);
 })
