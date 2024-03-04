@@ -5,9 +5,6 @@ body {
   }
   
   #hero {
-    border-left: 6px double blue;
-    border-top: 6px double blue;
-    border-right: 6px double black;
-    border-bottom: 6px double black;
+    border: 4px double #0D6EFD;
   }
   
